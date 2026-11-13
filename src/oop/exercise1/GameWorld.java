@@ -61,6 +61,12 @@ public class GameWorld {
 				totalValue += players[i].calculateInventoryValue();
 		return totalValue;
 	}
+	public Player[] getPlayers() {
+		return players;
+	}
+	public Enemy[] getEnemies() {
+		return enemies;
+	}
 	@Override
 	public String toString() {
 		int numberOfPlayers = 0;
