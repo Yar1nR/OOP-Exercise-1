@@ -29,8 +29,8 @@ public class Game {
 		players[1] = player2;
 		
 		GameWorld gameWorld = new GameWorld("Earth",players,enemies, 1);
-		
 		gameWorld.printAllPlayers();
+		
 		for (int i = 0; i<gameWorld.getPlayers().length; i++) {
 			if (gameWorld.getPlayers()[i] != null)
 				System.out.println(gameWorld.getPlayers()[i].getName() + ": " 

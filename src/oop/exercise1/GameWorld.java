@@ -45,14 +45,14 @@ public class GameWorld {
 		players[index] = player;
 	}
 	
-	public String printAllPlayers() {
+	public void printAllPlayers() {
 		String result = "";
 		int counter = 1;
 		for (int i = 0; i < players.length; i++)
 			if (players[i] != null)
 				result += "------------- Player " + counter++ + "-------------\n" +
 			players[i].toString() + "\n\n\n";
-		return result;
+		System.out.println(result);
 	}
 	public int getTotalValueOfWorld() {
 		int totalValue = 0;
