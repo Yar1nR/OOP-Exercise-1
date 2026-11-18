@@ -31,8 +31,10 @@ public class GameWorld {
 		int index = -1;
 		// Looking for empty slot
 		for (int i = 0; i < players.length; i++)
-			if (players[i] == null)
+			if (players[i] == null) {
 				index = i;
+				break;
+			}
 		
 		if (index == -1) { //there is no empty slot so double the length array
 			Player[] temp = new Player[players.length*2];
