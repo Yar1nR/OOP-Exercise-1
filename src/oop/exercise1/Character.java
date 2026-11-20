@@ -1,3 +1,4 @@
+//Yarin Rozilyo, 206519928 | Atawna Belal, 326309770 
 package oop.exercise1;
 
 public class Character {
@@ -37,8 +38,8 @@ public class Character {
 			this.level++;
 	}
 	public void heal(int amount) {
-		if (health+amount <= 10)
-			health += amount;
+		if (amount > 0)
+			health = Math.min(10,(health + amount));
 	}
 	
 	@Override

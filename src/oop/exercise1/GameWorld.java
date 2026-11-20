@@ -1,3 +1,4 @@
+//Yarin Rozilyo, 206519928 | Atawna Belal, 326309770 
 package oop.exercise1;
 
 public class GameWorld {
@@ -19,7 +20,10 @@ public class GameWorld {
 			this.difficulty = difficulty;
 		else
 			this.difficulty = 1;
-		this.players = new Player[players.length];
+		if (players.length > 0)
+			this.players = new Player[players.length];
+		else
+			this.players = new Player[1];
 		for (int i = 0; i < players.length; i++)
 			this.players[i] = players[i];
 		this.enemies = new Enemy[enemies.length];

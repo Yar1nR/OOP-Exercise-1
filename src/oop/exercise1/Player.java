@@ -1,3 +1,4 @@
+//Yarin Rozilyo, 206519928 | Atawna Belal, 326309770 
 package oop.exercise1;
 
 public class Player extends Character {
@@ -9,7 +10,10 @@ public class Player extends Character {
 	}
 	public Player(String name, int health, int level, Item[] inventory) {
 		super(name,health,level);
-		this.inventory = new Item[inventory.length];
+		if (inventory.length > 0)
+			this.inventory = new Item[inventory.length];
+		else
+			this.inventory = new Item[1];
 		//Deep copy
 		for (int i = 0 ; i < inventory.length; i++) {
 			this.inventory[i] = inventory[i];

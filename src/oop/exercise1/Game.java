@@ -1,3 +1,4 @@
+//Yarin Rozilyo, 206519928 | Atawna Belal, 326309770 
 package oop.exercise1;
 
 public class Game {
