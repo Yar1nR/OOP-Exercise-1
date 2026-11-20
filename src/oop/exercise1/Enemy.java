@@ -7,7 +7,7 @@ public class Enemy extends Character {
 	public Enemy(String name, int health, int level, int damage) {
 		super(name, health, level);
 		if (damage < 1 || damage > 5)
-			this.damage = 0;
+			this.damage = 1;
 		else
 			this.damage = damage;
 	}

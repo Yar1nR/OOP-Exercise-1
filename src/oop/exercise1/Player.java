@@ -58,26 +58,17 @@ public class Player extends Character {
 	}
 	@Override
 	public String toString() {
-		String result = super.toString() + "\nInventory: ";
-		boolean isEmpty = true;
-		
-		for (int i = 0; i < inventory.length; i++) {
-			if (inventory[i] != null) {
-				result += inventory[i].getName() + "|";
-				isEmpty = false;
-			}
-		}
-		
-		if (isEmpty)
-			result += "empty";
-		
-		//Delete "|" from the end
-		if (result.endsWith("|"))
-			result = result.substring(0,result.length()-1);
-		
-		return result;
-	}
+	    java.util.StringJoiner names = new java.util.StringJoiner(" | ");
+	    names.setEmptyValue("empty");
 
+	    for (Item item : inventory) {
+	        if (item != null) {
+	            names.add(item.getName());
+	        }
+	    }
+
+	    return super.toString() + "\nInventory: " + names;
+	}
 }
 
 

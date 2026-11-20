@@ -39,8 +39,7 @@ public class Character {
 	}
 	public void heal(int amount) {
 		if (amount > 0)
-			health = Math.min(10,(health + amount));
-	}
+			health += Math.min(amount, 10 - health);	}
 	
 	@Override
 	public String toString() {

@@ -52,14 +52,23 @@ public class GameWorld {
 	}
 	
 	public void printAllPlayers() {
-		String result = "";
-		int counter = 1;
-		for (int i = 0; i < players.length; i++)
-			if (players[i] != null)
-				result += "------------- Player " + counter++ + "-------------\n" +
-			players[i].toString() + "\n\n\n";
-		System.out.println(result);
+	    int counter = 1;
+
+	    for (Player player : players) {
+	        if (player == null) {
+	            continue;
+	        }
+
+	        if (counter > 1) {
+	            System.out.println();
+	        }
+
+	        System.out.println("------------- Player " + counter + " -------------");
+	        System.out.println(player);
+	        counter++;
+	    }
 	}
+	
 	public int getTotalValueOfWorld() {
 		int totalValue = 0;
 		for (int i = 0; i < players.length; i++)

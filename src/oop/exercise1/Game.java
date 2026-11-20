@@ -8,8 +8,7 @@ public class Game {
 		
 		Item sword = new Item("Sword",2,true);
 		Item bow = new Item("Bow",4,false);
-		Item rock = new Item("Rock",4,true);
-		
+		Item rock = new Item("Rock", 3, true);		
 		Player player1 = new Player("Dani", 10, 2);
 		player1.addItem(rock);
 		player1.addItem(sword);
@@ -45,8 +44,8 @@ public class Game {
 	public static void simulateBattle(Player player, Enemy enemy) {
 		int playerLevel = player.getLevel();
 		int enemyLevel = enemy.getLevel();
-		System.out.println(player.getName() + " - level:" + playerLevel + " VS "
-							+ enemy.getName() + " - Level: " + enemyLevel);
+		System.out.println(player.getName() + " - level : " + playerLevel
+		        + " VS " + enemy.getName() + " - level : " + enemyLevel);
 		if (playerLevel > enemyLevel) {
 			System.out.println(player.getName() + " wins!");
 			player.levelUp();	
